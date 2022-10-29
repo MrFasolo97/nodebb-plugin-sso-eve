@@ -1,7 +1,7 @@
 {
-  "name": "nodebb-plugin-sso-oauth",
-  "version": "0.5.0",
-  "description": "NodeBB Generic OAuth SSO",
+  "name": "nodebb-plugin-sso-eve",
+  "version": "0.0.3",
+  "description": "NodeBB EVE Online SSO",
   "main": "library.js",
   "scripts": {
     "test": "echo \"Error: no test specified\""
@@ -13,7 +13,9 @@
   "keywords": [
     "nodebb",
     "plugin",
-    "oauth",
+    "eve",
+    "eveonline",
+    "online",
     "oauth2",
     "sso",
     "single sign on",
@@ -21,12 +23,12 @@
     "registration"
   ],
   "author": {
-    "name": "Julian Lam",
-    "email": "julian@nodebb.org"
+    "name": "fasolo97",
+    "email": "79fasolo97@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-oauth/issues"
+    "url": "https://github.com/MrFasolo97/nodebb-plugin-sso-eve/issues"
   },
   "readme": "",
   "readmeFilename": "README.md",
