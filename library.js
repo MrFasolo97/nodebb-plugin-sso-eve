@@ -63,6 +63,7 @@
 			clientSecret: nconf.get('oauth:secret'),	// don't change this line
 		},
 		userRoute: '',	// This is the address to your app's "user profile" API endpoint (expects JSON)
+		scope: "publicData",
 	});
 
 	const OAuth = {};
