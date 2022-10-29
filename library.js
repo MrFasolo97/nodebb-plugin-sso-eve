@@ -47,8 +47,8 @@
 	 */
 
 	const constants = Object.freeze({
-		type: '',	// Either 'oauth' or 'oauth2'
-		name: '',	// Something unique to your OAuth provider in lowercase, like "github", or "nodebb"
+		type: 'oauth2',	// Either 'oauth' or 'oauth2'
+		name: 'nodebb-plugin-sso-eve',	// Something unique to your OAuth provider in lowercase, like "github", or "nodebb"
 		oauth: {
 			requestTokenURL: '',
 			accessTokenURL: '',
@@ -57,8 +57,8 @@
 			consumerSecret: nconf.get('oauth:secret'),	// don't change this line
 		},
 		oauth2: {
-			authorizationURL: '',
-			tokenURL: '',
+			authorizationURL: 'https://login.eveonline.com/oauth/authorize',
+			tokenURL: 'https://login.eveonline.com/oauth/token',
 			clientID: nconf.get('oauth:id'),	// don't change this line
 			clientSecret: nconf.get('oauth:secret'),	// don't change this line
 		},
@@ -148,9 +148,9 @@
 
 			passport.use(constants.name, new passportOAuth(opts, async (req, token, secret, profile, done) => {
 				const user = await OAuth.login({
-					oAuthid: profile.id,
-					handle: profile.displayName,
-					email: profile.emails[0].value,
+					oAuthid: "10000" + profile.CharacterID,
+					handle: profile.CharacterName,
+					email: profile.CharacterID + "@nomail.local",
 					isAdmin: profile.isAdmin,
 				});
 
